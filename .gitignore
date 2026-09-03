@@ -1,0 +1,25 @@
+# Python
+backend/venv/
+__pycache__/
+*.pyc
+
+# Environment files
+.env
+backend/.env
+frontend/.env
+
+# Database
+*.db
+
+# Node
+frontend/node_modules/
+
+# Build
+frontend/dist/
+
+# Large AI model files
+backend/app/models/pretrained/forensics_model/*.pt
+backend/app/models/pretrained/forensics_model/*.safetensors
+
+# Model cache
+backend/app/models/pretrained/forensics_model/.cache/

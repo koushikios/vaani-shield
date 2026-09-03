@@ -1,0 +1,7 @@
+{
+  "architectures": ["DeepfakeDetector"],
+  "model_type": "wavlm-aasist-deepfake-detector",
+  "backbone": "microsoft/wavlm-large",
+  "pooling": "aasist",
+  "task": "audio-classification"
+}

@@ -1,0 +1,22 @@
+:root {
+  --color-bg: #0b1120;
+  --color-surface: #111827;
+  --color-surface-alt: #1a2233;
+  --color-border: #262f42;
+
+  --color-text-primary: #e6e9f0;
+  --color-text-secondary: #9aa4b8;
+
+  --color-accent: #3fd0c9;
+  --color-accent-strong: #1fb8b0;
+
+  --color-genuine: #34d399;
+  --color-synthetic: #f87171;
+  --color-warning: #fbbf24;
+
+  --font-family: Arial, Helvetica, sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+}
