@@ -80,6 +80,7 @@ async def detect_audio(
     start_time = time.perf_counter()
 
     try:
+        # Save uploaded file
         input_file_path.write_bytes(
             audio_bytes
         )
@@ -96,11 +97,13 @@ async def detect_audio(
             analysis_file_path = (
                 converted_wav_path
             )
-detector_service = get_detector_service()
 
-result = detector_service.analyze(
-    str(analysis_file_path)
+        # Load detector service
+        detector_service = get_detector_service()
 
+        # Analyze audio
+        result = detector_service.analyze(
+            str(analysis_file_path)
         )
 
         processing_time_ms = int(
