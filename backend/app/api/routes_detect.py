@@ -9,7 +9,7 @@ from sqlalchemy.orm import Session
 
 from app.db import get_db
 from app.models.db_models import AnalysisSession
-from app.services.deepfake_detector import detector_service
+from app.services.deepfake_detector import get_detector_service
 
 
 router = APIRouter()
@@ -96,9 +96,11 @@ async def detect_audio(
             analysis_file_path = (
                 converted_wav_path
             )
+detector_service = get_detector_service()
 
-        result = detector_service.analyze(
-            str(analysis_file_path)
+result = detector_service.analyze(
+    str(analysis_file_path)
+
         )
 
         processing_time_ms = int(

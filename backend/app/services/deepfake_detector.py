@@ -175,4 +175,13 @@ class DeepfakeDetectionService:
         }
 
 
-detector_service = DeepfakeDetectionService()
+detector_service = None
+
+
+def get_detector_service():
+    global detector_service
+
+    if detector_service is None:
+        detector_service = DeepfakeDetectionService()
+
+    return detector_service
