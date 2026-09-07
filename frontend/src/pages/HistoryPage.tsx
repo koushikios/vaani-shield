@@ -565,8 +565,8 @@ export default function HistoryPage() {
                         percent,
                       }) =>
                         `${name}: ${(
-                          percent *
-                          100
+                         (percent ?? 0) *
+                         100
                         ).toFixed(
                           0
                         )}%`
