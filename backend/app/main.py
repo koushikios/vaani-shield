@@ -16,6 +16,8 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
+        "https://vaani-shield.vercel.app",
+        "https://vaani-shield-git-main-vaani-shield.vercel.app",
         "https://vaani-shield-iv3a.vercel.app",
         "http://localhost:5173",
         "http://127.0.0.1:5173",
