@@ -6,11 +6,20 @@ from app.api import routes_health, routes_history, routes_detect
 from app.core.config import settings
 from app.db import init_db
 
-app = FastAPI(title=settings.app_name)
 
+app = FastAPI(
+    title=settings.app_name
+)
+
+
+# CORS configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.cors_origin_list,
+    allow_origins=[
+        "https://vaani-shield-iv3a.vercel.app",
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -34,6 +43,7 @@ async def unhandled_exception_handler(
             "message": "An unexpected error occurred."
         },
     )
+
 
 app.include_router(routes_health.router)
 app.include_router(routes_history.router)
